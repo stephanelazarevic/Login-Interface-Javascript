@@ -1,0 +1,52 @@
+body {
+	display : flex;
+	align-items: center;
+	margin: auto;
+	background-color: #C8A3A3;
+}
+
+fieldset {
+	width: 40%;
+	display: inline-block;
+	margin-top: 30%;
+	margin-left: 92%;
+	background-color: #D0B4B4;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+}
+
+label {
+        margin: 6px;
+ 	display : inline-block;
+
+}
+
+.container {
+	text-align: center;
+	margin-top: 40px;
+	margin-left: 50%;
+}
+
+input [type=checkbok]{
+	width : 15px;
+}
+
+input, textarea{
+	width: 300px;
+    	background: white;
+}
+
+textarea{
+	height : 100px;
+}
+
+
+
+
+
+
+
+
+
+	

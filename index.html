@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Connexion</title>
+	<link rel="stylesheet" href="style.css">
+	<script language='javascript'>
+	
+	var cpt = 0;
+	var objPeople = [
+	{
+		username: "slazarevic",
+		password: "stephane2002"
+	},
+
+	{
+		username: "mkaria",
+		password: "marveen2002"
+	},
+
+	{
+		username: "Omar",
+		password: "DBD"
+	},
+
+	{
+		username: "ENC2021",
+		password: "ENC2021"
+	},
+
+	{
+		username: "admin",
+		password: "root"
+	}
+
+	]
+
+function getInfo() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+	
+	for (var i = 0; i < objPeople.length; i++) {
+		if(username == objPeople[i].username && password == objPeople[i].password) {
+			alert("connexion reussie !");
+			window.location.href = "page2.html";
+			return
+		}
+	}
+	cpt ++;
+	alert("Identification refusee, il vous reste " + (3-cpt) + " tentative(s)");
+	document.getElementById('username').value="";
+	document.getElementById('password').value="";
+
+	if (cpt > 2) {
+		alert("nombre de tentatives de connexion maximum atteint !");
+		window.location.href = "page3.html";
+			return
+	}
+}
+	
+</script>
+
+</head>
+
+<body>
+
+<center>
+	
+<fieldset>
+	<legend>Connexion</legend>		
+		<label>Identifiant:</label>
+		<input id = "username" placeholder = "saisir votre identifiant">
+		<label>Mot de passe:</label>
+		<input id = "password" placeholder = "saisir votre mot de passe">
+		<br/><br/><br/>
+		<button class="button" onclick="window.location='index.html';">Actualiser</button>
+		<button class="button" onclick = "getInfo()">Connexion</button>
+		<br/>	
+</fieldset>
+	
+</center>	
+		
+</body>
+
+</html>
